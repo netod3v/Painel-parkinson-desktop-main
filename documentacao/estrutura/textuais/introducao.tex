@@ -1,0 +1,57 @@
+% !TeX root = ../../principal.tex
+% ----------------------------------------------------------------------------
+%                                  INTRODUÇÃO
+% ----------------------------------------------------------------------------
+
+\chapter{INTRODUÇÃO}
+\label{chap:introducao}
+
+
+O avanço das tecnologias da informação tem promovido transformações significativas na área da saúde, especialmente no que se refere à coleta, análise e visualização de dados clínicos. Sistemas computacionais têm sido amplamente utilizados como ferramentas de suporte à decisão clínica, auxiliando profissionais da saúde na interpretação de informações e no acompanhamento de pacientes de forma mais eficiente.
+
+Nesse contexto, destaca-se a Doença de Parkinson, uma condição neurológica crônica que exige monitoramento contínuo e análise detalhada de dados ao longo do tempo. Com o objetivo de contribuir para o acompanhamento clínico e para o armazenamento organizado de informações relacionadas à doença, surgiu o projeto Sistema Integrado de Dados Biomédicos (SIDABI), desenvolvido inicialmente na Universidade Federal de Uberlândia (UFU), a partir dos estudos de \citeonline{folador2021}. O projeto foi concebido como um \textit{software} baseado na \textit{web} voltado à integração de dados na área da saúde, oferecendo recursos para armazenamento, compartilhamento e análise de informações clínicas relacionadas à Doença de Parkinson.
+
+A partir da evolução dessas pesquisas, o sistema passou a receber novas implementações e adaptações, possibilitando o desenvolvimento do Painel Parkinson, também denominado PATS, apresentado no estudo de \citeonline{rabelo2025}. O sistema ganhou maior estruturação, incluindo interface visual, recursos de visualização de dados clínicos e \textit{dashboards }informativos, visando auxiliar profissionais da saúde no acompanhamento de pacientes diagnosticados com a Doença de Parkinson.
+
+O Painel Parkinson busca facilitar a interpretação dos dados coletados por meio de gráficos, indicadores e painéis informativos, contribuindo para análises mais rápidas e eficientes no contexto clínico. Apesar de sua relevância, o sistema apresenta limitações relacionadas ao acesso exclusivamente via navegador, o que pode impactar aspectos como desempenho, acessibilidade e experiência do usuário. Além disso, em ambientes clínicos, nos quais agilidade e praticidade são fatores importantes, a necessidade de acessar navegadores e carregar páginas pode tornar o processo menos eficiente para médicos e profissionais da saúde.
+
+Nesse sentido, o benefício desta pesquisa reside na investigação e documentação da viabilidade técnica de transição de arquiteturas web para desktop no contexto da saúde digital. O estudo contribui academicamente ao mapear as limitações estruturais em nuvem e propor um modelo descentralizado de processamento para Sistemas de Apoio à Decisão Clínica (SADC). A partir dessa problematização, levanta-se a hipótese de que a aplicação desktop possa descentralizar o esforço computacional. Dessa forma, a pesquisa busca investigar se o novo ecossistema confirmará a eficácia do suporte à decisão clínica quando operado localmente.
+
+ 
+
+\section{Tema}
+\label{sec:tema}
+
+Este trabalho aborda a adaptação e evolução do sistema Painel Parkinson (PATS), originalmente desenvolvido como uma aplicação web voltada ao suporte à decisão clínica no contexto da Doença de Parkinson, para uma aplicação \textit{desktop}. A proposta foca na descentralização do processamento de dados biomédicos pesados para o ambiente local, visando mitigar a latência de renderização gráfica e otimizar a infraestrutura computacional.
+
+Além da adaptação da plataforma, o trabalho também envolve a análise da arquitetura do sistema existente, incluindo sua estrutura de \textit{front-end}, \textit{back-end}, integração com banco de dados e utilização de tecnologias de virtualização e containers. Dessa forma, busca-se contribuir para a continuidade e evolução do projeto, permitindo futuras implementações e melhorias voltadas ao monitoramento, visualização e análise de dados clínicos.
+
+\section{Problema}
+\label{sec:Problema}
+
+O sistema Painel Parkinson, embora funcional em ambiente \textit{web}, esbarra em limitações de infraestrutura quando submetido a um alto volume de dados biométricos. A renderização de gráficos clínicos complexos na nuvem gera latência de processamento, especialmente em centros de pesquisa com infraestrutura de rede limitada. Ademais, a centralização das informações e a manutenção desses processos contínuos na nuvem elevam consideravelmente os custos operacionais com servidores e hospedagem. Diante disso, a transição para uma aplicação local redireciona o esforço computacional, viabilizando a contenção de despesas operacionais e a mitigação da latência visual.
+
+Além disso, a arquitetura \textit{web} do sistema impõe limitações técnicas para a evolução da ferramenta, sobretudo pela dependência estrita de conectividade contínua. A execução exclusiva via navegador dificulta o armazenamento local de grande capacidade e o processamento de grandes conjuntos de dados em modo \textit{offline}. Essa dependência estrutural pode inviabilizar o acompanhamento fluido em ambientes hospitalares ou laboratoriais sujeitos a instabilidades de rede, além de dificultar a futura integração de rotinas de processamento de dados mais pesadas diretamente na máquina do profissional.
+
+Nesse sentido, levanta-se a hipótese de que a adaptação do Painel Parkinson para uma arquitetura \textit{desktop} possa descentralizar o processamento e reduzir a sobrecarga na nuvem. Dessa forma, busca-se investigar se os resultados esperados com essa implementação confirmarão, na prática, a redução de custos de infraestrutura e o ganho de eficiência técnica no suporte à decisão clínica.
+  
+
+\section{Objetivo Geral}
+\label{sec:Objetivo Geral}
+
+Desenvolver uma versão \textit{desktop} para o sistema Painel Parkinson, com o objetivo de reduzir os custos operacionais de infraestrutura do sistema e aumentar a eficácia do suporte à decisão clínica. A solução destina-se a otimizar a análise de dados por profissionais como médicos, fisioterapeutas, profissionais de educação física e terapeutas ocupacionais, atuantes no contexto de consultórios, ambulatórios e centros de pesquisa.
+
+\subsection{Objetivos Específicos}
+\label{sec:Objetivos Específicos}
+
+\begin{enumerate}
+    \item Identificar os requisitos e as oportunidades de melhoria na arquitetura atual do Painel Parkinson para a transição ao ambiente \textit{desktop}.
+    \item Desenvolver a interface da aplicação \textit{desktop} com foco na otimização da visualização dos painéis informativos clínicos.
+    \item Realizar o teste preliminar do uso da plataforma com profissionais da área da saúde para validar a eficiência no acesso e tratamento das informações.
+    \item Analisar o impacto da nova arquitetura local na redução dos custos operacionais e de infraestrutura de servidores.
+\end{enumerate}
+
+\section{Estrutura do TCC}
+\label{sec:Estrutura do TCC}
+
+O presente trabalho está estruturado em quatro capítulos principais. O Capítulo 1 (Introdução) apresenta a contextualização do tema, a definição do problema, os objetivos pretendidos e a justificativa para a execução do projeto. O Capítulo 2 (Conceitos Gerais e Revisão da Literatura) aborda os fundamentos da Doença de Parkinson, a aplicação de sistemas de apoio à decisão clínica, diretrizes de usabilidade e trabalhos correlatos. O Capítulo 3 (Metodologia) concentra a modelagem e a engenharia da solução, especificando a arquitetura, as tecnologias aplicadas, os requisitos do sistema, as telas iniciais, bem como a análise preliminar. Por fim, o Capítulo 4 apresenta as Considerações Finais sobre a transição e evolução do sistema. As Referências elencam todas as fontes bibliográficas e documentais consultadas para o embasamento da pesquisa.

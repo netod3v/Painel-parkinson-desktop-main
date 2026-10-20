@@ -1,0 +1,35 @@
+% !TeX root = ../../../principal.tex
+\section{Interoperabilidade de dados clínicos com HL7 FHIR}
+\label{sec:hl7-fhir}
+
+A interoperabilidade em saúde envolve a troca de informações entre sistemas e a preservação de seu significado clínico. Um hospital, um laboratório e uma clínica podem utilizar sistemas diferentes, com formas próprias de organizar os dados do paciente. O FHIR estabelece estruturas comuns para que essas aplicações possam compartilhar informações de maneira padronizada, ou seja, ``falar a mesma língua''. No acompanhamento da Doença de Parkinson, isso permite organizar o intercâmbio de avaliações e resultados entre serviços de saúde. O artigo da \citeonline{ctcFHIR2024} contextualiza essa necessidade; a especificação oficial da Health Level Seven International (HL7) fundamenta sua realização técnica.
+
+O \textit{Fast Healthcare Interoperability Resources} (FHIR) é um padrão da HL7 para a troca eletrônica de informações em saúde. Sua unidade básica é o recurso: uma estrutura que representa uma entidade ou informação clínica, com elementos e tipos de dados definidos. Recursos podem ser relacionados por referências, permitindo compor registros que associem o paciente, as avaliações e seus resultados. A especificação contempla representações como JSON e XML, facilitando o processamento das informações por aplicações distintas \cite{hl7FHIRoverview2023}.
+
+\subsection{Troca de informações e preservação do significado}
+
+Uma das formas de intercâmbio previstas pelo FHIR é a interface REST sobre HTTP, com operações para leitura, pesquisa, criação e atualização de recursos. Entretanto, disponibilizar uma API ou transmitir arquivos JSON não é suficiente para caracterizar uma integração FHIR: o conteúdo e as interações precisam respeitar as regras aplicáveis da especificação \cite{hl7FHIRhttp2023}.
+
+Os perfis permitem adaptar os recursos a um contexto de uso, estabelecendo restrições sobre elementos, cardinalidades, terminologias e extensões. Essas definições ajudam os sistemas participantes a concordar sobre quais informações devem existir e como serão interpretadas. Um guia de implementação organiza regras e artefatos para um cenário de integração. Assim, a interoperabilidade exige um acordo sobre versão do FHIR, perfis adotados e códigos utilizados, além da compatibilidade do transporte \cite{hl7FHIRprofiling2023}.
+
+\subsection{Exportação dos dados do paciente em PDF e FHIR}
+
+Para o Painel Parkinson Desktop, a proposta é oferecer ao usuário a escolha do formato de exportação dos dados do paciente selecionado. O PDF apresenta um relatório destinado à leitura, impressão e consulta pelos profissionais, enquanto a exportação FHIR fornece dados estruturados para processamento por outros sistemas compatíveis. As duas opções atendem a finalidades complementares: comunicação por meio de um documento legível e intercâmbio de informações que possam ser incorporadas a outro sistema.
+
+A exportação FHIR pode ser organizada em um arquivo JSON contendo recursos relacionados. O recurso \textit{Patient} representa os dados administrativos e de identificação do paciente, enquanto um \textit{Bundle} permite reunir uma coleção de recursos em uma única estrutura \cite{hl7FHIRpatient2023,hl7FHIRbundle2023}. Na proposta de exportação, essa coleção poderia reunir o paciente e suas avaliações, preservando as referências entre os registros. A importação depende de o sistema destinatário aceitar a versão e os perfis utilizados; o arquivo não garante compatibilidade automática com qualquer aplicação.
+
+\subsection{Representação das avaliações MDS-UPDRS na exportação}
+
+No contexto da exportação proposta, o recurso \textit{Questionnaire} permite definir perguntas, agrupamentos e opções de resposta, enquanto \textit{QuestionnaireResponse} registra as respostas de uma aplicação do questionário. Essa separação possibilita distinguir a definição do instrumento do registro individual de sua aplicação \cite{hl7FHIRquestionnaire2023}.
+
+Como proposta de modelagem para o Painel Parkinson, os grupos do questionário poderiam corresponder às quatro partes da MDS-UPDRS, preservando a identificação dos itens e a versão do instrumento. Essa correspondência é uma proposta para o domínio da aplicação, não um perfil MDS-UPDRS validado ou uma integração já implementada. Sua adoção dependeria do mapeamento dos dados existentes e da definição de regras compartilhadas com os sistemas destinatários.
+
+O recurso \textit{Observation} representa medições e avaliações clínicas e pode registrar resultados de instrumentos de avaliação. Nesse modelo proposto, os escores de cada parte poderiam ser representados por observações separadas, associadas ao paciente, à data da avaliação e ao instrumento de origem. A especificação prevê elementos para identificar o tipo de observação, seu valor, momento clinicamente relevante e referências aos dados dos quais o resultado foi derivado \cite{hl7FHIRobservation2023}.
+
+Para o acompanhamento gráfico, esse mapeamento permitiria recuperar a data e o escore de cada domínio sem depender dos nomes internos de campos de um único sistema. A informação sobre o estado ON/OFF precisaria de representação acordada no perfil adotado, preservando o contexto do exame motor. Também seria necessário manter a distinção entre respostas ausentes e escores iguais a zero, evitando transformar ausência de informação em um resultado clínico normal.
+
+\subsection{Segurança e limites da aplicação do padrão}
+
+A especificação FHIR não é, por si só, um protocolo de segurança. A implantação requer mecanismos de autenticação, autorização, proteção do transporte e auditoria, definidos conforme o ambiente de uso \cite{hl7FHIRsecurity2023}. Portanto, adotar estruturas FHIR não demonstra automaticamente a proteção dos dados ou a conformidade jurídica da aplicação.
+
+Para o Painel Parkinson Desktop, essa fundamentação orienta a proposta de disponibilizar exportação em PDF e FHIR. A concretização da opção FHIR exige selecionar a versão e os perfis de integração, validar os recursos gerados e testar sua importação em sistemas compatíveis. O padrão organiza a representação e o intercâmbio dos dados; a interpretação dos escores e sua utilização no acompanhamento permanecem vinculadas à fundamentação clínica da MDS-UPDRS.

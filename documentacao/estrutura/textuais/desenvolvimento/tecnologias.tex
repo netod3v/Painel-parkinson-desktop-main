@@ -1,0 +1,65 @@
+% ----------------------------------------------------------------------------
+%                               METODOLOGIA
+% ----------------------------------------------------------------------------
+
+\chapter{TECNOLOGIAS}
+\label{chap:tecnologias}
+
+Nesta seção, serão descritas as tecnologias necessárias para o desenvolvimento do Painel Parkinson em versão \textit{desktop}.
+
+\section{\textit{Front-end}}
+\label{sec:Front end}
+
+O \textit{front-end} consiste na interação do usuário com o sistema. O \textit{front-end} tem como maior objetivo a experiência do usuário, manipulação das informações e a criação de identidade visual, levando em consideração \textit{User Experience} (UX) e suas boas práticas.
+
+\subsection{Javascript}
+\label{sec:Javascript}
+
+JavaScript é uma linguagem de programação interpretada, baseada em objetos e amplamente usadas para páginas web. O JavaScript segue o padrão ECMAScript, que foi incorporado em todos os navegadores modernos.
+
+\subsection{VueJS}
+\label{sec:VueJS}
+
+\textit{Framework front-end} que traz como principal vantagem ser \textit{Open Source}. Possui uma renderização declarativa que compreende a sintaxe de um modelo com saída HTML com base no JavaScript. Além disso, rastreando as mudanças de estados do JavaScript com atualizações do DOM de forma eficiente \cite{vuejs_intro}.
+
+\subsection{Electron.js}
+\label{sec:ElectronJS}
+
+O Electron.js é um \textit{framework} capaz de criar aplicações com JavaScript, HTML e CSS. Com isso, permitindo uma base de código para o JavaScript, além disso, funciona em multiplataforma, sendo elas: Windows, macOS e Linux.
+Possui uma grande confiabilidade, interoperabilidade, versatilidade e ubiquidade.
+
+\subsection{Painel Parkinson}
+\label{sec:PAINEL}
+
+O módulo faz parte do Painel Parkinson. Um sistema web desenvolvido em VueJS que utiliza o SIDABI como banco de dados. O painel Parkinson foi desenvolvido para apoiar profissionais da saúde na análise de diagnóticos e apoio à decisões em pacientes  com a doença de Parkinson.
+
+\section{\textit{Back-end}}
+\label{sec:Back end}
+
+O \textit{Back-end} é uma parte da aplicação que tem como principais responsabilidades, a execução lógicas mais complexas e o armazenamento dos dados para a aplicação.
+\textit{Back-end}\cite{alura_backend}.
+
+Sua função é de suma importância para a integração do \textit{front-end} com o banco de dados. Com isso, garantindo segurança das informações, performance e modularização do sistema.
+As tecnologias no desenvolvimento \textit{back-end} incluem a linguagem Python com o \textit{framework} Flask e o PostgreSQL com ligação direta ao SIDABI.
+
+\subsection{Python}
+\label{sec:Python}
+O Python possui uma sintaxe clara que favorece a legibilidade do código-fonte, tornando a linguagem mais produtiva \cite{borges2014python}. Além disso, é um \textit{software} de código aberto com licença compatível com a GPL \cite{borges2014python}.
+
+Incluindo uma diversidade de estruturas de alto nível e inúmeros \textit{frameworks} que podem ser adicionados.
+
+Além de ser uma das linguagens mais utilizadas pelos desenvolvedores que permite automatizar tarefas com o PostgreSQL.
+
+Essa produtividade será essencial para a produção do Painel Parkinson em forma \textit{desktop} no processo de automação das informações e as regras de negócios.
+
+\subsection{Flask}
+\label{sec:Flask}
+
+O Flask é um \textit{framework} leve para aplicações web WSGI. Ele facilita e agiliza o desenvolvimento sendo poderoso por ser um \textit{framework} expansível que ajuda desde o início do desenvolvimento e um núcleo poderoso para a instalação do que for necessário para a aplicação do Painel Parkinson\cite{grinberg2018flask}.
+
+\subsection{PostgreSQL}
+\label{sec:PostgreSQL}
+
+Segundo a documentação oficial, "O PostgreSQL é um poderoso sistema de banco de dados objeto-relacional de código aberto que utiliza e estende a linguagem SQL, combinada com diversos recursos que permitem armazenar e dimensionar com segurança as cargas de trabalho de dados mais complexas" \cite{postgresql_about}.
+
+O PostgreSQL é um \textit{software} gratuito e de código aberto e conta com soluções eficientes, integridade dos dados e alto desempenho.

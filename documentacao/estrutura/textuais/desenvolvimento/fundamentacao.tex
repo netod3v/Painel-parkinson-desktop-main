@@ -1,0 +1,168 @@
+% ----------------------------------------------------------------------------
+%                           FUNDAMENTAÇÃO TEÓRICA
+% ----------------------------------------------------------------------------
+
+\chapter{CONCEITOS GERAIS E REVISÃO DA LITERATURA}
+\label{chap:fundamentacao}
+
+Neste capítulo, será apresentada uma breve introdução para à Doença de Parkinson, abordando como um sistema de dados pode auxiliar no apoio à decisão na área da saúde e a importância do teste de usabilidade do sistema.
+
+\section{Doença de Parkinson}
+\label{sec:Parkinson}
+
+A Doença de Parkinson (DP) é uma afecção neurodegenerativa crônica e progressiva do sistema nervoso central, configurando-se como a segunda doença neurodegenerativa mais comum associada ao envelhecimento \cite{magalhaes2022teorias}. Independente da idade de início, a fisiopatologia primária dos sintomas decorre da degeneração dos neurônios dopaminérgicos localizados na parte compacta da substância negra mesencefálica \cite{silva2021doenca, Santos2024, Lima2023}. Estima-se que, ao manifestarem-se os primeiros sinais motores, cerca de 60\% desses neurônios já tenham sido previamente degradados \cite{silva2021doenca}.
+
+A redução substancial e continuada da dopamina, neurotransmissor essencial para a regulação dos circuitos dos núcleos da base e modulação do córtex motor, desencadeia o surgimento de uma sintomatologia complexa e heterogênea \cite{Lima2023, Cabreira2019}. Clinicamente, a DP manifesta-se por meio de uma tétrade motora cardinal, composta por bradicinesia, rigidez muscular, tremor de repouso e alterações posturais e de marcha \cite{Santos2024, Luiz2022}. Além dos sintomas motores, a literatura oficial reconhece que a apresentação clínica engloba disfunções não motoras severas de ordem cognitiva, autonômica e comportamental, compreendendo alterações do olfato, distúrbios do sono, constipação, sintomas psicóticos e evolução para demência \cite{brasil2025, Santos2024, Cabreira2019}.
+
+Existe uma prevalência de 0,3\% na população geral, sendo mais comumente na população acima dos 80 anos. Em termos epidemiológicos, a taxa de incidência global de DP em pessoas com 40 anos ou mais apresenta diferenças significativas entre os sexos, sendo de 37,55 por 100.000 pessoas-ano em mulheres e 61,21 por 100.000 pessoas-ano em homens. As taxas de incidência aumentam progressivamente com a idade; entre as mulheres, variam de 3,26 por 100.000 pessoas-ano na faixa etária de 40 a 49 anos, para 103,48 com mais de 80 anos. Entre os homens, esse aumento é ainda mais expressivo, saltando de 3,57 por 100.000 pessoas-ano (na faixa de 40 a 49 anos) para 258,47 na idade superior a 80 anos. Uma variedade clínica da doença acomete também pacientes antes dos 40 anos.
+
+Não existe cura para a doença, sendo o tratamento estritamente voltado para o controle de sintomas. O manejo envolve abordagens não farmacológicas, fisioterapia, fonoterapia e terapia ocupacional, aliados ao tratamento medicamentoso. Embora a progressão da doença seja individual e possua um curso clínico variável, o manejo adequado exige a estratificação dos pacientes em três subtipos principais para fins de prognóstico: (1) indivíduos com predominância motora leve, que possuem progressão lenta e boa resposta medicamentosa; (2) indivíduos com subtipo intermediário; e (3) indivíduos com subtipo maligno difuso, caracterizados por sintomas precoces proeminentes, progressão rápida e má resposta terapêutica \cite{brasil2025}.
+
+Em virtude do caráter evolutivo da enfermidade e da ausência de biomarcadores laboratoriais ou exames de imagem definitivos para a confirmação diagnóstica \textit{in vivo}, a conduta médica permanece estritamente dependente da avaliação semiológica clínica contínua \cite{Lima2023, Cabreira2019}.
+
+
+\subsection{Estadiamento clínico e evolução funcional}
+\label{subsec:estadiamento-clinico}
+
+Para caracterizar as fases de comprometimento motor, a escala de Hoehn e Yahr (HY) classifica a condição funcional observada em cinco estágios. Esses estágios descrevem a gravidade clínica no momento da avaliação; não representam intervalos de duração fixa nem uma sequência obrigatória para todos os pacientes \cite{Goetz2004HY}.
+
+\begin{enumerate}
+    \item \textbf{Estágio 1:} comprometimento unilateral, geralmente com limitação funcional mínima ou ausente.
+    \item \textbf{Estágio 2:} comprometimento bilateral ou axial, sem alteração do equilíbrio.
+    \item \textbf{Estágio 3:} comprometimento bilateral com instabilidade postural, mantendo independência física.
+    \item \textbf{Estágio 4:} incapacidade acentuada, embora ainda seja possível permanecer em pé ou caminhar sem auxílio.
+    \item \textbf{Estágio 5:} dependência de cadeira de rodas ou permanência no leito, salvo quando há assistência.
+\end{enumerate}
+
+Essa síntese baseia-se na revisão da MDS \cite{Goetz2004HY}. A HY enfatiza lateralidade, equilíbrio e independência, sem abranger adequadamente manifestações não motoras. Sua natureza ordinal impede interpretar distâncias entre estágios como equivalentes. Assim, o estadiamento deve ser complementado por uma avaliação multidimensional, como a MDS-UPDRS.
+
+\subsection{A Escala MDS-UPDRS e a Avaliação Clínica} 
+\label{subsec:mds-updrs}
+
+\paragraph{A Necessidade de Padronização Semiológica} 
+A mensuração empírica dos sintomas da Doença de Parkinson, quando desprovida de critérios estandardizados, introduz uma elevada subjetividade e variabilidade inter e intraexaminadores na estimativa do comprometimento motor \cite{Luiz2022}. Torna-se, portanto, de vital necessidade a adoção de métricas clínicas padronizadas e validadas internacionalmente \cite{Goetz2008}, assegurando que equipes multiprofissionais e diferentes especialistas avaliem a progressão motora, a severidade dos sintomas e a eficácia das intervenções terapêuticas de maneira coesa, objetiva e reprodutível \cite{Santos2024, Luiz2022}. 
+
+\paragraph{A Estrutura Metodológica da Escala MDS-UPDRS} 
+Para suprir essa demanda por padronização clinimétrica, a \textit{Movement Disorder Society} (MDS) promoveu uma revisão estruturada da tradicional \textit{Unified Parkinson's Disease Rating Scale} (UPDRS), consolidando a escala MDS-UPDRS como o padrão-ouro mundial para a quantificação da gravidade e progressão da DP \cite{Goetz2008, Luiz2022}. A escala possui uma organização sistemática dividida em quatro domínios de avaliação complementares \cite{Santos2024, Goetz2008}: 
+
+\begin{itemize} 
+    \item \textbf{Parte I (Experiências Não Motoras da Vida Diária):} Avalia o impacto de aspectos não motores na rotina do paciente, tais como comprometimento cognitivo, depressão, ansiedade, distúrbios do sono e alucinações \cite{Santos2024, Goetz2008}; 
+    \item \textbf{Parte II (Experiências Motoras da Vida Diária):} Mensura a percepção do paciente ou de seu cuidador quanto às limitações funcionais provocadas pelos sintomas motores em atividades autônomas, como fala, escrita, vestuário, mastigação e higiene \cite{Santos2024, Goetz2008}; 
+    \item \textbf{Parte III (Exame Motor):} Consiste na avaliação clínica objetiva realizada pelo especialista, destinada a quantificar a intensidade das manifestações motoras ativas do paciente \cite{Santos2024, Goetz2008, Luiz2022}; 
+    \item \textbf{Parte IV (Complicações Motoras):} Examina o surgimento de complicações secundárias induzidas pela farmacoterapia dopaminérgica de longo prazo, abrangendo discinesias involuntárias e flutuações motoras, caracterizadas pela alternância entre períodos de melhor controle dos sintomas sob efeito da medicação (\textit{ON}) e períodos de redução desse benefício (\textit{OFF}) \cite{Santos2024, Goetz2008}.
+\end{itemize} 
+
+Dentre estes domínios, a \textbf{Parte III} configura-se como o núcleo fundamental de quantificação do estado motor do indivíduo \cite{Lima2023, Luiz2022}. Sua aplicação envolve um protocolo de tarefas padronizadas para mensurar detalhadamente os sinais cardinais da doença. A bradicinesia, sinal obrigatório para a caracterização do parkinsonismo \cite{Lima2023, Cabreira2019}, é rigorosamente avaliada por meio de testes cinemáticos de membros superiores e inferiores, como a tarefa de pinça ou batida dos dedos (\textit{finger tapping test}), abertura e fechamento das mãos, movimentos de pronação-supinação do antebraço e agilidade das pernas \cite{Lima2023, Luiz2022}. Nesses exames, o clínico analisa a velocidade, a amplitude, o ritmo e o declínio progressivo do movimento no tempo \cite{Lima2023, Luiz2022}. Simultaneamente, a Parte III afere a rigidez muscular por meio da movimentação passiva das articulações e mensura os tremores de repouso e posturais/cinéticos \cite{Santos2024, Goetz2008}. Cada item da escala é pontuado segundo um escore ordinal de 5 pontos ($0 = \text{normal}$, $1 = \text{discreto}$, $2 = \text{leve}$, $3 = \text{moderado}$ e $4 = \text{grave}$) \cite{Santos2024, Goetz2008, Luiz2022}. 
+
+\paragraph{Fundamentação clinimétrica e interpretação dos escores}
+O estudo de validação da MDS-UPDRS incluiu 877 pacientes de 39 centros e examinou consistência interna e estrutura fatorial. Os resultados sustentaram a interpretação de cada parte separadamente, sem recomendar a soma das quatro partes como um único desfecho clínico \cite{Goetz2008}. Portanto, os painéis devem apresentar os escores por domínio, preservando a identificação da parte avaliada.
+
+O exame motor também exige contextualização: o formulário registra o estado \textit{ON/OFF} associado à avaliação da Parte III \cite{Goetz2008}. Comparações longitudinais devem considerar essa informação, pois avaliações realizadas em condições terapêuticas distintas não são diretamente intercambiáveis. A pontuação representa o comprometimento observado nas condições de coleta; sua variação, isoladamente, não demonstra progressão neurodegenerativa nem eficácia de uma intervenção.
+
+Como requisito de projeto derivado dessa fundamentação, propõe-se armazenar data da avaliação, versão do instrumento, estado medicamentoso, respostas individuais e escores por parte. Campos não preenchidos devem permanecer identificados como ausentes, evitando sua conversão automática em zero. Esses requisitos orientam a rastreabilidade dos dados e precisam ser verificados na implementação e na validação do sistema.
+
+\paragraph{A Ligação Tecnológica e Computacional: O Painel Parkinson Desktop} 
+A despeito da robustez clinimétrica da MDS-UPDRS, sua aplicação tradicional baseada em formulários analógicos em papel apresenta importantes limitações operacionais. A coleta manual sujeita o processo a equívocos de transcrição e a erros de somatório aritmético na consolidação dos escores totais de cada parte, o que pode comprometer a precisão do acompanhamento e induzir a interpretações equivocadas do estado do paciente. 
+
+A superação desses gargalos operacionais viabiliza-se pela transição para um ecossistema digital estruturado, consubstanciado na arquitetura proposta para o \textit{Painel Parkinson Desktop}. Desenvolvido para atuar como um Sistema de Apoio à Decisão Clínica (SADC) de alto desempenho, o sistema conecta os requisitos da literatura médica à Ciência da Computação. Ao integrar a interface reativa em VueJS (encapsulada pelo \textit{framework} Electron.js) a um \textit{back-end} local em Python (Flask) e ao banco de dados relacional PostgreSQL (vinculado ao modelo de dados do Sistema Integrado de Dados Biomédicos, SIDABI) \cite{folador2021}, a plataforma automatiza o cálculo instantâneo dos escores da MDS-UPDRS, eliminando por completo os erros de somatório manual e a perda de estado de seleções médicas. 
+
+Sob a perspectiva da engenharia de software e da infraestrutura de dados, a arquitetura local (\textit{desktop}) descentraliza o processamento biométrico, eliminando a latência de rede decorrente de servidores em nuvem e assegurando operação plena em modo \textit{offline}. Essa descentralização garante a persistência segura dos dados locais no ambiente institucional e atende aos requisitos da Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018). Por meio de mecanismos automatizados de anonimização em segundo plano (em conformidade com o Art. 13 da LGPD), os dados clínicos sensíveis permanecem sob controle estrito do ambiente hospitalar, enquanto \textit{hashes} criptográficos viabilizam a sincronização segura com bases centrais de pesquisa sem expor a identidade dos pacientes. Dessa forma, a digitalização local e estruturada possibilita a geração automatizada de históricos longitudinais precisos e gráficos de evolução temporal, fornecendo ao especialista uma ferramenta robusta, ágil e segura para o suporte à decisão clínica sem a dependência de infraestrutura em nuvem.
+
+\input{estrutura/textuais/desenvolvimento/dados-mds-graficos}
+
+\section{Sistemas de apoio à decisão na saúde}
+\label{sec:Sistemas de apoio}
+
+Os sistemas de apoio à decisão clínica são ferramentas computacionais que auxiliam os profissionais da saúde na análise de dados e na tomada de decisões, contribuindo para o processamento de informações complexas no contexto clínico \cite{shortliffe2014}.
+
+Atualmente, os Sistemas de Apoio à Decisão Clínica (SADC) representam abordagens tecnológicas fundamentais para otimizar a prática profissional, pois fornecem instruções que complementam o conhecimento e as habilidades do corpo clínico sem substituí-los. A adoção dessas ferramentas atua diretamente na minimização de erros médicos e na redução de custos e de tempo relacionados ao diagnóstico. Além de funcionarem como um repositório unificado do histórico do paciente, os SADC cruzam grandes volumes de informações para gerar recomendações e alertas personalizados, demonstrando particular eficiência nas fases de prevenção e apoio diagnóstico. Dessa forma, a informatização dos dados aumenta a segurança no manejo clínico e a perspectiva de assertividade nos resultados terapêuticos \cite{silva2022sistemas}.
+
+\input{estrutura/textuais/desenvolvimento/hl7-fhir}
+
+\section{Ciência de dados}
+\label{sec:Ciencia de dados}
+
+A Ciência de Dados é uma área multifacetada que não possui uma definição única, podendo ser descrita simultaneamente como uma ciência, uma disciplina, um fluxo de trabalho e uma profissão \cite{mendes2025fundamentos}. Historicamente, ela possui raízes profundas na Estatística, especialmente na Análise Exploratória de Dados, evoluiu para lidar com a análise de grandes e complexos conjuntos de informações, frequentemente chamados de Megadados ou \textit{Big Data} \cite{morettin2019introducao}.  Como disciplina, trata-se de um campo interdisciplinar que integra conhecimentos de Matemática, Estatística, Ciência da Computação e o domínio específico da aplicação estudada \cite{mendes2025fundamentos}. A literatura divide a Ciência de Dados em três perspectivas principais: a estatística, que orienta a coleta e análise dos dados; a computacional, focada no desenvolvimento de algoritmos e no armazenamento em larga escala; e a humana, que busca aplicar esses métodos para resolver problemas reais e comunicar os resultados de forma clara \cite{morettin2019introducao}.  Encarada como um fluxo de trabalho, a Ciência de Dados é um processo contínuo e iterativo que engloba a coleta, limpeza, organização, análise, interpretação e visualização das informações \cite{mendes2025fundamentos}. É importante destacar que ela é mais ampla do que a simples mineração de dados enquanto a mineração foca em descobrir padrões em dados estruturados, a Ciência de Dados engloba todo o ciclo de vida da informação, incluindo dados não estruturados e o uso de aprendizado de máquina \cite{mendes2025fundamentos}. Por fim, devido à sua complexidade, a resolução de problemas nessa área exige o trabalho de equipes multidisciplinares, unindo estatísticos, cientistas da computação e especialistas do domínio do negócio \cite{morettin2019introducao}.
+
+\section{Avaliação de Interface e Desempenho do Sistema}
+\label{sec:Teste}
+
+Para avaliar a efetividade de um sistema \textit{desktop}, é de suma importância a realização de testes focados na estabilidade e no desempenho da aplicação. A validação consiste em analisar a melhoria contínua do Painel Parkinson, observando fatores técnicos como o tempo de carregamento de dados, a redução de latência e a eficiência na apresentação visual das informações, garantindo que o sistema responda rapidamente aos comandos.
+
+Para uma efetiva validação, é necessário submeter a ferramenta \textit{desktop} a simulações que reflitam o volume de dados de um cenário de uso real. Ao longo dessa execução, a coleta de métricas de desempenho garante a comprovação de que a arquitetura suporta a exigência do ambiente clínico.
+
+Segundo Hewett et al. (1992), a área de Interação Humano-Computador (IHC) está relacionada ao projeto, implementação e avaliação de sistemas computacionais interativos voltados ao uso humano. Nesse contexto, aspectos como contexto de uso, características dos usuários e arquitetura da interface influenciam diretamente na experiência de utilização do sistema \cite{ihc2022}.
+
+Além disso, os estudos relacionados à Experiência do Usuário (\textit{User Experience} -- UX) destacam que fatores como facilidade de uso, eficiência, acessibilidade e organização visual influenciam diretamente na aceitação e utilização de sistemas computacionais em ambientes profissionais. Dessa forma, a adaptação do Painel Parkinson para o ambiente \textit{desktop} busca não apenas uma mudança estrutural da aplicação, mas também melhorias de desempenho que impactam positivamente a experiência de uso dos profissionais da saúde.
+
+Segundo definem Few e Edge (2007 apud \citeonline[p. 20]{oliveira2023}), "Um painel é uma exibição visual das informações mais importantes necessárias para atingir um ou mais objetivos; consolidado e organizado em uma única tela para que as informações possam ser monitoradas rapidamente." Nesse sentido, o painel informativo deve ser submetido a rigorosos testes de validação técnica para garantir que a robustez do sistema permita que os profissionais envolvidos no acompanhamento do paciente consigam abstrair os conteúdos propostos de forma fluida e sem interrupções.
+
+\section{Protocolo de Mapeamento Sistemático da Literatura}
+\label{sec:ProtocoloSistematico}
+
+A fim de identificar o estado da arte e as lacunas tecnológicas acerca do monitoramento clínico da Doença de Parkinson (DP), realizou-se um Mapeamento Sistemático da Literatura. Conforme apontado por \citeonline{demuth2024scoping}, essa metodologia é fundamental para mapear abordagens algorítmicas e verificar a maturidade clínica de sistemas de suporte à decisão. A progressão variável da DP impõe desafios significativos ao manejo clínico tradicional, baseado em consultas presenciais esporádicas, tornando necessária a implementação de estratégias de monitoramento contínuo \citeonline{mahboobeh2021dynamic}.
+
+\section{Evolução das Soluções e Base Estrutural}
+\label{sec:EvolucaoSolucoes}
+
+O mapeamento revelou uma transição de modelos teóricos para implementações digitais disruptivas. Iniciativas como o projeto SIDABI, explorado por \citeonline{folador2021}, foram pioneiras na centralização de dados biomédicos e apoio a grupos de pesquisa. A partir dessa base, surgiram soluções focadas na visualização clínica, exemplificadas pelo Painel Parkinson, cujos estudos de \citeonline{oliveira2023} e \citeonline{rabelo2025} expandiram o uso de \textit{dashboards} interativos e mecanismos de suporte à decisão baseados em estatísticas temporais \citeonline{santos2023desenvolvimento}.
+
+A implementação tecnológica dessas soluções fundamenta-se em ecossistemas modulares que integram aplicações voltadas ao registro de testes de sintomas e controle medicamentoso a dashboards centralizados para o uso médico \citeonline{mahboobeh2021dynamic}. Arquiteturas modernas, como o padrão Model-View-Controller (MVC) e serviços de \textit{Backend} via APIs REST, garantem a segurança, escalabilidade e o processamento em tempo real dos dados \citeonline{mahboobeh2021dynamic}.
+
+\section{Lacunas Identificadas e Proposta}
+\label{sec:Lacunas}
+
+Apesar do avanço, o mapeamento sistemático evidenciou limitações críticas: a dependência de navegadores e a necessidade de conexão constante com a internet restringem a praticidade no ambiente clínico. Além disso, a literatura aponta que a eficácia diagnóstica é potencializada por funcionalidades avançadas de "contextualização", onde métricas individuais são comparadas a populações de referência, e pelo uso de sensores vestíveis para a coleta quantitativa de sintomas motores, como a rigidez de pulso \citeonline{demuth2024scoping, mahboobeh2021dynamic}. Diante disso, a proposta deste trabalho busca preencher essa lacuna por meio da adaptação do Painel Parkinson para uma arquitetura \textit{desktop}, visando elevar o desempenho, a acessibilidade e a praticidade da ferramenta no cotidiano hospitalar \citeonline{santos2023desenvolvimento}.
+
+\subsection{Sistemas Similares e Trabalhos Correlatos}
+\label{subsec:sistemas_similares_correlatos}
+
+Com base no mapeamento sistemático da literatura e na análise crítica das soluções desenvolvidas no âmbito do Grupo de Pesquisa em Computação Aplicada (GPCA), foi possível mapear a evolução das ferramentas tecnológicas de suporte ao acompanhamento da Doença de Parkinson (DP). Embora as soluções anteriores tenham estabelecido as bases conceituais para a gestão de dados clínicos, a análise de suas respectivas implementações revela um conjunto de lacunas arquiteturais e falhas de usabilidade que comprometem sua aplicação prática contínua.
+
+No cenário de soluções correlatas globais, destacam-se iniciativas consolidadas voltadas ao monitoramento de sintomas. O estudo \textit{Fox Insight} (2017) baseia-se em avaliações longitudinais \textit{online} por meio de formulários digitais autorrelatados pelos pacientes, porém carece de integração direta com bancos de dados biomédicos de referência local. Por sua vez, a plataforma comercial \textit{Empatica PKG} (2025) utiliza sensores vestíveis (\textit{wearables}) de nível médico para o registro contínuo de tremores e sintomas motores, processando relatórios em infraestrutura de nuvem proprietária. Apesar da robustez de ambas as soluções, observa-se que sua operação é estritamente subordinada ao modelo de computação em nuvem, o que gera custos recorrentes de processamento, alta dependência de conectividade ininterrupta e restrições de compatibilidade com ecossistemas acadêmicos abertos.
+
+No contexto das pesquisas desenvolvidas internamente pelo GPCA, a evolução tecnológica deu-se a partir do projeto SIDABI (Sistema Integrado de Dados Biomédicos) \cite{folador2021}, que estruturou o armazenamento, gerenciamento e segurança de dados clínicos brutos relacionados à DP. Com base nessa infraestrutura, \cite{oliveira2021} desenvolveram o primeiro protótipo de \textit{dashboard} em ambiente \textit{web} focado na visualização gráfica das escalas clínicas da \textit{Unified Parkinson's Disease Rating Scale} (MDS-UPDRS). Posteriormente, o sistema de apresentação de dados proposto por \cite{costa2022sistema} integrou a visualização das sessões de coletas feitas por sensores inerciais de acelerometria e giroscopia. Mais recentemente, \cite{oliveira2023} expandiram a plataforma por meio do desenvolvimento de painéis informativos para avaliar a influência de terapias complementares no estado emocional dos pacientes, utilizando escalas clínicas integradas.
+
+Apesar da contribuição científica inegável das versões \textit{web} anteriores, a consolidação desse ecossistema em ambiente clínico revelou gargalos operacionais críticos que inviabilizam a sua adoção fluida no cotidiano hospitalar. O primeiro gargalo refere-se à latência de processamento e renderização de dados biométricos pesados. Como evidenciado por \cite{costa2022sistema}, o processamento de arquivos volumosos de sensores em nuvem (hospedados em instâncias de baixa escala como AWS EC2 e AWS RDS) degrada o desempenho da aplicação, gerando travamentos no navegador do usuário e comprometendo a visualização de gráficos dinâmicos de alta frequência devido à latência de rede entre o cliente e o servidor.
+
+Do ponto de vista da infraestrutura e viabilidade econômica, o funcionamento ininterrupto da aplicação em nuvem sob demanda eleva substancialmente os custos operacionais com hospedagem de servidores e manutenção de bancos de dados gerenciados, como o PostgreSQL Aurora, conforme pontuado por \cite{oliveira2023}. Ademais, a arquitetura estritamente baseada na \textit{web} impõe uma dependência crítica de conectividade estável com a internet. Em ambientes clínicos e hospitalares, sujeitos a instabilidades severas de rede, essa dependência pode interromper os atendimentos médicos e impossibilitar o acesso em tempo real aos históricos dos pacientes, o que representa um fator de risco à continuidade assistencial.
+
+Essas limitações arquiteturais refletiram-se diretamente em falhas de usabilidade severas identificadas pelos usuários finais. No estudo clínico de usabilidade conduzido por \cite{rabelo2025} junto a 10 profissionais da saúde (fisioterapeutas e profissionais de educação física), foram mapeadas falhas sistêmicas recorrentes de navegação e exibição no painel \textit{web}:
+
+\begin{itemize}
+    \item \textbf{Perda de estado de seleção (IDP1, IDP2, IDP5):} A aplicação não conseguia manter parâmetros de filtragem definidos pelo profissional (tais como a condição ``com estímulo'' ou ``sem estímulo'') após a atualização de páginas ou retorno a telas anteriores, exigindo reconfigurações constantes;
+    \item \textbf{Renderização incorreta e perda de pontos gráficos (IDP6):} Certas rotinas de \textit{zoom} em gráficos dinâmicos de tremor faziam com que pontos de dados sumissem da tela, comprometendo a precisão da leitura médica;
+    \item \textbf{Carregamento incorreto de dados e indução ao erro (IDP8):} O sistema pré-carregava informações antigas ou inconsistentes na interface UPDRS antes da validação completa da seleção do profissional de saúde, induzindo o especialista a interpretar dados equivocados de outros pacientes;
+    \item \textbf{Navegação redundante e duplicação de histórico (IDP4):} O uso do botão de voltar nativo do navegador gerava redirecionamentos cíclicos, forçando recarregamentos desnecessários e duplicando registros no histórico de navegação, elevando o tempo de conclusão das tarefas clínicas.
+\end{itemize}
+
+Frente a esses desafios, a transição arquitetural do Painel Parkinson para uma estrutura local multiplataforma via \textit{desktop} surge como a solução tecnológica definitiva para mitigar tais gargalos. Ao envelopar o \textit{front-end} em VueJS utilizando o \textit{framework} Electron.js, e integrando localmente o \textit{back-end} em Python (Flask) com o banco de dados PostgreSQL, os seguintes benefícios diretos são proporcionados ao cenário clínico:
+
+\begin{itemize}
+    \item \textbf{Latência Zero e Renderização Gráfica Avançada:} O processamento local elimina os tempos de tráfego de dados biométricos de alta amostragem (sensores inerciais e matrizes densas), garantindo renderização visual instantânea e responsividade de gráficos clínicos de tremor, sem sobrecarregar a memória RAM ou congelar a interface do usuário;
+    \item \textbf{Independência de Conexão (Suporte Offline):} A persistência de dados local permite o pleno funcionamento do sistema em modo completamente \textit{offline}, assegurando que o profissional de saúde realize consultas e coletas ininterruptas em laboratórios e enfermarias, independentemente de instabilidades de rede;
+    \item \textbf{Otimização de Custos e Escalabilidade Acadêmica:} A descentralização da infraestrutura computacional elimina a necessidade de manutenção de instâncias de processamento robustas em servidores de nuvem, reduzindo os custos recorrentes de hospedagem e viabilizando a distribuição sustentável do \textit{software} para múltiplos centros de pesquisa parceiros;
+    \item \textbf{Conformidade com a LGPD e Privacidade de Dados:} Em estrita consonância com a Lei Geral de Proteção de Dados (LGPD), a arquitetura local permite que os dados sensíveis dos pacientes sejam armazenados e processados sob o controle direto do hospital ou laboratório de coleta. A sincronização com a base central de pesquisa do SIDABI é realizada de forma automática em segundo plano (\textit{background}) por meio de protocolos de anonimização (em conformidade com o Art. 13 da Lei nº 13.709/2018), eliminando o risco de exposição de informações em trânsito e mitigando vulnerabilidades cibernéticas.
+\end{itemize}
+
+Dessa forma, a presente solução proposta desvia o foco de uma abordagem científica abstrata e apresenta um benefício tecnológico palpável, convertendo o Painel Parkinson em um Sistema de Apoio à Decisão Clínica (SADC) verdadeiramente robusto, rápido, financeiramente viável e seguro para a prática médica cotidiana.
+
+\begin{table}[htbp]
+\centering
+\caption{Comparativo entre sistemas similares e a proposta atual.}
+\label{tab:sistemas_similares}
+\begin{tabular}{|p{3.8cm}|p{5.2cm}|p{6.5cm}|}
+\hline
+\textbf{Sistema} & \textbf{Objetivo} & \textbf{Limitações / Oportunidades} \\ \hline
+\textbf{Fox Insight (2017)} & Estudo longitudinal \textit{online} para coleta de dados de rotina por meio de questionários virtuais. & Baseado em dados autorrelatados via \textit{web}, sem integração direta com banco de dados biomédicos locais. \\ \hline
+\textbf{SIDABI (2021)} & Gerenciamento, centralização e segurança de dados clínicos brutos da Doença de Parkinson. & Foco estrito em armazenamento de dados estruturados e de coletas, sem camada avançada de visualização ou suporte à decisão. \\ \hline
+\textbf{Dashboard Web (2021)} & Visualização gráfica inicial para interpretação de escalas clínicas (MDS-UPDRS) do banco SIDABI. & Dependência exclusiva de navegador \textit{web}, dependência de internet e instâncias de nuvem limitadas. \\ \hline
+\textbf{Visualização de Sensores (2022)} \newline (Lucas Costa) & Apresentação gráfica de dados coletados por sensores inerciais (acelerometria e giroscopia). & Elevada latência de processamento de arquivos CSV volumosos na nuvem e travamentos de renderização dinâmica no navegador. \\ \hline
+\textbf{Painel Parkinson (2023)} \newline (Lucas e Samuel) & Visualização de dados emocionais e acompanhamento de terapias complementares da DP. & Arquitetura \textit{web} sujeita a instabilidades de rede, altos custos de nuvem recorrentes e perda de estado de filtros clínicos. \\ \hline
+\textbf{Empatica PKG (2025)} & Monitoramento remoto e contínuo de sintomas motores via \textit{wearables} de nível médico. & Solução comercial proprietária de alto custo, com dependência de conectividade constante à nuvem privada e sem integração aberta com bases locais. \\ \hline
+\textbf{Painel Parkinson Desktop (2026) [Proposta Atual]} & \textbf{Apoio à decisão clínica local com processamento de alto desempenho e gráficos instantâneos.} & \textbf{Alta performance local (latência zero), operação 100\% offline para consultórios, custo zero de infraestrutura em nuvem e conformidade nativa com a LGPD.} \\ \hline
+\end{tabular}
+\vspace{0.2cm}
+
+\small{\textit{Fonte: Elaborado pelos autores com base em Michael J. Fox Foundation (2017), Folador (2021), Oliveira e Conceição (2021), Costa (2022), Oliveira e Gouvea (2023) e Empatica (2025).}}
+\end{table}

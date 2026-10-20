@@ -1,0 +1,24 @@
+% !TeX root = ../../../principal.tex
+\subsection{Relação entre os dados da MDS-UPDRS e a representação gráfica}
+\label{subsec:dados-mds-graficos}
+
+A estrutura multidimensional da MDS-UPDRS orienta a organização dos painéis: cada avaliação associa uma data aos escores das partes I, II, III e IV. Essa associação permite representar tanto o acompanhamento temporal quanto a distribuição dos valores entre domínios clínicos. A recomendação de interpretar as partes separadamente deve ser preservada na visualização, evitando tratar a soma dos domínios como um desfecho clínico validado \cite{Goetz2008}.
+
+\paragraph{Mapeamento dos dados para as coordenadas do gráfico}
+No sistema analisado, o histórico do paciente fornece as datas das avaliações e suas respectivas pontuações. Esses dados são associados às categorias do eixo horizontal e aos valores do eixo vertical da série denominada ``Pontuação''. Assim, a data determina a posição de cada avaliação na sequência apresentada, enquanto a pontuação determina a altura do ponto no gráfico \cite{parkinsonDashboardFront2026}.
+
+Assim, cada ponto representa uma associação $(d_k,T_k)$, em que $d_k$ identifica a data da avaliação e $T_k$ é a pontuação total fornecida ao painel. A visualização utiliza esse valor recebido, cuja fórmula de agregação precisa ser verificada na origem dos dados. Além disso, as datas são utilizadas como categorias na ordem recebida, sem ordenação cronológica explícita no tratamento analisado. A distância horizontal entre pontos não deve ser interpretada automaticamente como proporcional ao tempo transcorrido.
+
+\paragraph{Particionamento por domínio e seleção da avaliação}
+O particionamento visual corresponde às quatro partes da escala. No histórico, a seleção de um ponto recupera os escores das partes I, II, III e IV associados à avaliação escolhida. Esses valores atualizam quatro barras, uma para cada domínio, acompanhadas da data correspondente \cite{parkinsonDashboardFront2026}. A visualização combina, dessa forma, uma visão temporal com o detalhamento da avaliação selecionada.
+
+Na atualização por seleção, o comprimento preenchido da barra da parte $j$ corresponde a uma transformação percentual:
+\begin{equation}
+    P_{j,k}=\left\lceil 100\frac{S_{j,k}}{M_j}\right\rceil,
+\end{equation}
+em que $S_{j,k}$ representa o escore recebido para a parte $j$ na avaliação $k$, $M_j$ é o denominador adotado na visualização e o arredondamento é feito para cima. Os denominadores presentes no sistema analisado são $(52,52,128,24)$. Por exemplo, o valor 26 na Parte I produz uma barra de 50\%. Esse percentual descreve a proporção em relação ao denominador adotado pela interface; não equivale a uma porcentagem de progressão da doença, incapacidade ou resposta terapêutica.
+
+\paragraph{Limitações e requisitos de fidelidade da visualização}
+A descrição da implementação deve ser distinguida de sua validação clínica. O denominador 128 da Parte III precisa ser confrontado com a versão do instrumento e os itens efetivamente coletados, antes de ser apresentado como limite da escala. A inicialização das barras utiliza os valores brutos, enquanto a seleção aplica a transformação percentual; essa diferença requer uniformização. O gráfico temporal também fixa o eixo vertical entre 0 e 200, uma configuração da interface que não define a faixa clínica do instrumento \cite{parkinsonDashboardFront2026}.
+
+Outra limitação identificada no tratamento dos dados é a exclusão de valores iguais a zero e a aplicação de critérios de filtragem diferentes ao histórico e aos escores por parte. Isso pode excluir avaliações válidas e comprometer a correspondência entre o ponto selecionado e seus domínios. Como requisito para a evolução do sistema, cada avaliação deve manter um identificador comum entre data, escores e barras, com validação explícita de valores ausentes e preservação dos zeros. Recomenda-se ainda apresentar o acompanhamento por parte, identificar o estado ON/OFF da Parte III e documentar os denominadores utilizados, mantendo a interpretação clínica sob responsabilidade do profissional.
